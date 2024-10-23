@@ -1,4 +1,4 @@
-package com.example.mobileprojectlab
+package com.example.mobileprojectlab.UI.firstFragment
 
 import androidx.fragment.app.viewModels
 import android.os.Bundle
@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.viewModelScope
 import com.example.mobileprojectlab.databinding.FragmentFirstBinding
+import com.example.mobileprojectlab.presentation.firstFragment.FirstFragmentState
+import com.example.mobileprojectlab.presentation.firstFragment.FirstViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 

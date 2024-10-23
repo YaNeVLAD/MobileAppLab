@@ -1,4 +1,4 @@
-package com.example.mobileprojectlab
+package com.example.mobileprojectlab.presentation.firstFragment
 
 data class FirstFragmentState(
     val isLoading: Boolean,

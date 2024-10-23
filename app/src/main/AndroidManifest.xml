@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MobileProjectLab"
         tools:targetApi="31" >
         <activity
-            android:name=".MainActivity"
+            android:name=".system.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.MobileProjectLab" >
             <intent-filter>

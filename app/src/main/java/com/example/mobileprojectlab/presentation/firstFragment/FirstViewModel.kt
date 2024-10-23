@@ -1,4 +1,4 @@
-package com.example.mobileprojectlab
+package com.example.mobileprojectlab.presentation.firstFragment
 
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
