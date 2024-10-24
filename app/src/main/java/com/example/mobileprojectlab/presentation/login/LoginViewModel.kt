@@ -10,14 +10,16 @@ import kotlinx.coroutines.launch
 class LoginViewModel : ViewModel() {
     fun onLoginButtonPressed(login: String, password: String) {
         viewModelScope.launch {
-            state.update { it.copy(isInProgress = true) }
+            state.update { it.copy(isLoading = true) }
 
             delay(500)
             if (validate(login, password)) {
-                state.update { it.copy(error = "", isInProgress = false) }
+                state.update { it.copy(error = null, isValid = true) }
             } else {
-                state.update { it.copy(error = "Wrong Password", isInProgress = false) }
+                state.update { it.copy(error = "Wrong login or password", isValid = false) }
             }
+
+            state.update { it.copy(isLoading = false) }
         }
     }
 

@@ -1,4 +1,4 @@
-package com.example.mobileprojectlab.UI.login
+package com.example.mobileprojectlab.ui.login
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -36,7 +36,7 @@ class LoginFragment : Fragment() {
     }
 
     private fun render(state: LoginState) {
-        mBinding.loginButton.isEnabled = !state.isInProgress
+        mBinding.loginButton.isEnabled = !state.isLoading
         mBinding.loginError.text =
             if (state.error != null) {
                 mBinding.loginError.isInvisible = false
@@ -45,6 +45,7 @@ class LoginFragment : Fragment() {
                 mBinding.loginError.isInvisible = true
                 ""
             }
+        mBinding.toastLayout.isInvisible = !state.isValid
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
