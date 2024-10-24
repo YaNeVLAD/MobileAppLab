@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MobileProjectLab</string>
+    <string name="increment_button_text">Cookies: %d</string>
+    <string name="password">Password</string>
+    <string name="login_input">Login</string>
+    <string name="login_button">Login</string>
+    <string name="error_text">%s</string>
 </resources>
