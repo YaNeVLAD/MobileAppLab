@@ -37,14 +37,8 @@ class LoginFragment : Fragment() {
 
     private fun render(state: LoginState) {
         mBinding.loginButton.isEnabled = !state.isLoading
-        mBinding.loginError.text =
-            if (state.error != null) {
-                mBinding.loginError.isInvisible = false
-                state.error
-            } else {
-                mBinding.loginError.isInvisible = true
-                ""
-            }
+        mBinding.loginError.isInvisible = state.isValid
+        mBinding.loginError.text = state.error ?: ""
         mBinding.toastLayout.isInvisible = !state.isValid
     }
 
